@@ -1,6 +1,7 @@
 <h1>Conduit QA Assessment by Tinika Pasinetti</h1>
 
-This automation suite is created using the Cypress Automation framework with Cucumber BDD.
+This automation suite is created using Cypress Automation framework with Cucumber BDD Framework for ease of reading.
+It follows the Page Object Model where each screen has a POM file and a step definition file for its elements and actions.
 
 <h2>To run using terminal</h2>
 <ol>
