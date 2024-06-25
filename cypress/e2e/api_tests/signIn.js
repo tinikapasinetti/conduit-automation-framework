@@ -21,8 +21,7 @@ describe('Sign In API Tests', () => {
         });
     });
 
-    it('Unsuccessful Login', () => {
-        const email = 'email' + String(new Date().getTime());
+    it('Unsuccessful Login with invalid credentials', () => {
 
         cy.request({
             method: "POST",
@@ -30,12 +29,44 @@ describe('Sign In API Tests', () => {
             failOnStatusCode: false,
             body:
             {
-                user: { email:utility.generateRandomEmail(), password: "Test@123" }
+                user: { email: utility.generateRandomEmail(), password: "Test@123" }
             }
         }).should((response) => {
             expect(response.status).to.eq(403);
             expect(response.body.errors).to.have.property('email or password');
             expect(response.body.errors["email or password"]).to.contain('is invalid');
+        })
+    });
+
+    it('Unsuccessful Login with blank email', () => {
+
+        cy.request({
+            method: "POST",
+            url: apiUrl + signInPath,
+            failOnStatusCode: false,
+            body:
+            {
+                user: { email: "", password: "Test@123" }
+            }
+        }).should((response) => {
+            expect(response.status).to.eq(422);
+            expect(response.body.errors["email"]).to.contain('can\'t be blank');
+        })
+    });
+
+    it('Unsuccessful Login with blank password', () => {
+
+        cy.request({
+            method: "POST",
+            url: apiUrl + signInPath,
+            failOnStatusCode: false,
+            body:
+            {
+                user: { email: "utility.generateRandomEmail()", password: "" }
+            }
+        }).should((response) => {
+            expect(response.status).to.eq(422);
+            expect(response.body.errors["password"]).to.contain('can\'t be blank');
         })
     });
 })

@@ -21,7 +21,7 @@ describe('Sign Up API Tests', () => {
         });
     });
 
-    it('Unsuccessful Sign Up', () => {
+    it('Unsuccessful Sign Up with Existing Email', () => {
 
         cy.request({
             method: "POST",
@@ -37,8 +37,29 @@ describe('Sign Up API Tests', () => {
                 }
             }
         }).should((response) => {
-            expect(response.status).to.eq(403);
+            expect(response.status).to.eq(422);
             expect(response.body.errors["email"]).to.contain('has already been taken');
+        })
+    });
+
+    it('Unsuccessful Sign Up with Existing Username', () => {
+
+        cy.request({
+            method: "POST",
+            url: apiUrl + signUpPath,
+            failOnStatusCode: false,
+            body:
+            {
+                user:
+                {
+                    username: "Tinika1",
+                    email:  utility.generateRandomEmail(),
+                    password: "Test@123"
+                }
+            }
+        }).should((response) => {
+            expect(response.status).to.eq(422);
+            expect(response.body.errors["username"]).to.contain('has already been taken');
         })
     });
 })
