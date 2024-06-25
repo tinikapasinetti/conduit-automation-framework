@@ -7,7 +7,7 @@ describe('Global Feed API Tests', () => {
     const articleFeedPath = '/articles';
     const utility = new Utility();
 
-    it('Create article', function () {
+    it('Successful create article', function () {
         const accessToken = '';
         const title = '';
         //first request logs in and saves the access token
@@ -48,6 +48,44 @@ describe('Global Feed API Tests', () => {
                 expect(response.body.article).to.have.property('body');
                 expect(response.body.article).to.have.property('author');
                 expect(response.body.article.tagList).to.be.a('array');
+            }))
+    })
+
+    it('Unsuccessful create article', function () {
+        const accessToken = '';
+        const title = '';
+        cy.request({
+            method: "POST",
+            url: apiUrl + signInPath,
+            body:
+            {
+                user: { email: "tinikapas@gmail.com", password: "Test@123" }
+            }
+        }).then(response => {
+            this.accessToken = response.body.user.token;
+            expect(this.accessToken).not.to.be.undefined;
+        }).then((accessToken) =>
+            cy.request({
+                method: "POST",
+                url: apiUrl + articleFeedPath,
+                failOnStatusCode: false,
+                headers: {
+                    Authorization: 'Token ' + this.accessToken
+                },
+                body:
+                {
+                    "article":
+                    {
+                        "title": "calculating the driver wont do anything, we need to generate the optical SMTP feed!",
+                        "description": "How to be an amazing QA engineer",
+                        "body": "API testing for dummies",
+                        "tagList": ["api", "testing"]
+                    }
+                }
+            }).then(response => {
+                expect(response.status).to.eq(422);
+                console.log(response);
+                expect(response.body.errors['title']).to.contain('must be unique');
             }))
     })
 })
