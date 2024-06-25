@@ -13,14 +13,14 @@ Given("I open the Conduit web app", () => {
 
 })
 
-And ("I click the {string} button on the {string} screen", (btnType, screen) => {
-    if(btnType === "signIn"){
-        if(screen === "home"){
+And("I click the {string} button on the {string} screen", (btnType, screen) => {
+    if (btnType === "signIn") {
+        if (screen === "home") {
             homeScreen.clickSignInBtn();
-        }else{
+        } else {
             signInScreen.clickSignInBtn();
         }
-    }else {
+    } else {
         homeScreen.clickSignUpBtn();
     }
 })

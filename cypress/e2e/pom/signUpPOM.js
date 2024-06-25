@@ -1,6 +1,6 @@
 export default class signUpPOM {
 
-    constructor() {};
+    constructor() { };
 
     screenElement = {
         usernameField: () => cy.get("[placeholder='Username']"),
@@ -10,29 +10,29 @@ export default class signUpPOM {
         errorMsg: () => cy.get("[class='error-messages']"),
     }
 
-    enterUsername(username){
-        if((username === "blank")){
+    enterUsername(username) {
+        if ((username === "blank")) {
             username = ""
-        }else if(username === "random"){
-            username = "user+"+ Date.now()+ "@test.com";
+        } else if (username === "random") {
+            username = "user+" + Date.now() + "@test.com";
             this.screenElement.usernameField().type(username);
         }
     }
 
-    enterEmail(email){
-        if((email === "blank")){
+    enterEmail(email) {
+        if ((email === "blank")) {
             email = ""
-        }else if(email === "random"){
-            email = "email+"+ Date.now()+ "@test.com";
+        } else if (email === "random") {
+            email = "email+" + Date.now() + "@test.com";
             this.screenElement.emailField().type(email);
         }
     }
-    enterPassword(password){
-        if(!(password === "blank")){
+    enterPassword(password) {
+        if (!(password === "blank")) {
             this.screenElement.passwordField().type(password);
         }
     }
-    clickSignInBtn(){
+    clickSignInBtn() {
         this.screenElement.signInBtn().click();
     }
 }

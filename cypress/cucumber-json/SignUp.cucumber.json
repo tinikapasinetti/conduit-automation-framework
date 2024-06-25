@@ -22,7 +22,7 @@
             "name": "I open the Conduit web app",
             "result": {
               "status": "passed",
-              "duration": 722000000
+              "duration": 353000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "I click the \"signUp\" button on the \"home\" screen",
             "result": {
               "status": "passed",
-              "duration": 86000000
+              "duration": 80000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "I enter username \"random\" email \"random\" and password \"Test@123\"",
             "result": {
               "status": "passed",
-              "duration": 1251000000
+              "duration": 1184000000
             }
           },
           {
@@ -52,7 +52,7 @@
             "name": "I click the 'signIn' button on the \"signIn\" screen",
             "result": {
               "status": "passed",
-              "duration": 91000000
+              "duration": 93000000
             }
           },
           {
@@ -62,7 +62,7 @@
             "name": "I should see the \"home\" screen",
             "result": {
               "status": "passed",
-              "duration": 1077000000
+              "duration": 602000000
             }
           }
         ]
@@ -82,7 +82,7 @@
             "name": "I open the Conduit web app",
             "result": {
               "status": "passed",
-              "duration": 429000000
+              "duration": 420000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "I click the \"signUp\" button on the \"home\" screen",
             "result": {
               "status": "passed",
-              "duration": 83000000
+              "duration": 77000000
             }
           },
           {
@@ -102,7 +102,7 @@
             "name": "I enter username \"blank\" email \"random\" and password \"Test@123\"",
             "result": {
               "status": "passed",
-              "duration": 756000000
+              "duration": 699000000
             }
           },
           {
@@ -122,7 +122,7 @@
             "name": "I should see the \"username can't be blank\" error message on the sign in screen",
             "result": {
               "status": "passed",
-              "duration": 489000000
+              "duration": 964000000
             }
           }
         ]
@@ -142,7 +142,7 @@
             "name": "I open the Conduit web app",
             "result": {
               "status": "passed",
-              "duration": 401000000
+              "duration": 387000000
             }
           },
           {
@@ -152,7 +152,7 @@
             "name": "I click the \"signUp\" button on the \"home\" screen",
             "result": {
               "status": "passed",
-              "duration": 85000000
+              "duration": 80000000
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "I enter username \"random\" email \"blank\" and password \"Test@123\"",
             "result": {
               "status": "passed",
-              "duration": 745000000
+              "duration": 677000000
             }
           },
           {
@@ -172,7 +172,7 @@
             "name": "I click the 'signIn' button on the \"signIn\" screen",
             "result": {
               "status": "passed",
-              "duration": 89000000
+              "duration": 85000000
             }
           },
           {
@@ -182,7 +182,7 @@
             "name": "I should see the \"email can't be blank\" error message on the sign in screen",
             "result": {
               "status": "passed",
-              "duration": 486000000
+              "duration": 460000000
             }
           }
         ]
@@ -202,7 +202,7 @@
             "name": "I open the Conduit web app",
             "result": {
               "status": "passed",
-              "duration": 400000000
+              "duration": 388000000
             }
           },
           {
@@ -212,7 +212,7 @@
             "name": "I click the \"signUp\" button on the \"home\" screen",
             "result": {
               "status": "passed",
-              "duration": 83000000
+              "duration": 87000000
             }
           },
           {
@@ -222,7 +222,7 @@
             "name": "I enter username \"random\" email \"random\" and password \"blank\"",
             "result": {
               "status": "passed",
-              "duration": 982000000
+              "duration": 938000000
             }
           },
           {
@@ -232,7 +232,7 @@
             "name": "I click the 'signIn' button on the \"signIn\" screen",
             "result": {
               "status": "passed",
-              "duration": 89000000
+              "duration": 88000000
             }
           },
           {
@@ -242,7 +242,7 @@
             "name": "I should see the \"pasword can't be blank\" error message on the sign in screen",
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 12000000
             }
           }
         ]

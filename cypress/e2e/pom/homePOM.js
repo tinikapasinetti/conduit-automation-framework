@@ -10,13 +10,13 @@ export default class homePOM {
         loadingIndicatorText: () => cy.get('[ng-hide="!$ctrl.loading"]'),
     };
 
-    clickSignInBtn(){
+    clickSignInBtn() {
         this.screenElement.signInBtn().click();
     }
-    clickSignUpBtn(){
+    clickSignUpBtn() {
         this.screenElement.signUpBtn().click();
     }
-    verifyScreen(){
+    verifyScreen() {
         this.screenElement.homeScreenText().should('exist');
     }
 

@@ -1,6 +1,6 @@
 export default class signInPOM {
 
-    constructor() {};
+    constructor() { };
 
     screenElement = {
         emailField: () => cy.get("[type='email']"),
@@ -9,17 +9,17 @@ export default class signInPOM {
         errorMsg: () => cy.get("[class='error-messages']"),
     }
 
-    enterEmail(email){
-        if(!(email === "blank")){
+    enterEmail(email) {
+        if (!(email === "blank")) {
             this.screenElement.emailField().type(email);
         }
     }
-    enterPassword(password){
-        if(!(password === "blank")){
+    enterPassword(password) {
+        if (!(password === "blank")) {
             this.screenElement.passwordField().type(password);
         }
     }
-    clickSignInBtn(){
+    clickSignInBtn() {
         this.screenElement.signInBtn().click();
     }
 }

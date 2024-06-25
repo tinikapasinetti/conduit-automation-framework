@@ -4,11 +4,11 @@ export default class Utility {
         return "email+" + String(new Date().getTime()) + "@test.com";
     }
 
-    generateRandomUsername(){
+    generateRandomUsername() {
         return "user+" + String(new Date().getTime());
     }
 
-    generateRandomTitle(){
+    generateRandomTitle() {
         return "title+" + String(new Date().getTime());
     }
 }
