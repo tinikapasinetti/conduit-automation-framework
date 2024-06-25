@@ -9,7 +9,7 @@ describe('Sign Up API Tests', () => {
     it('Successful Sign Up', () => {
         cy.request('POST', apiUrl + signUpPath, {
             user: {
-                username: utility.gernateRandomUsername(),
+                username: utility.generateRandomUsername(),
                 email: utility.generateRandomEmail(),
                 password: "Test@123"
             }
@@ -31,7 +31,7 @@ describe('Sign Up API Tests', () => {
             {
                 user:
                 {
-                    username: utility.gernateRandomUsername(),
+                    username: utility.generateRandomUsername(),
                     email: "tinikapas@gmail.com",
                     password: "Test@123"
                 }
@@ -53,7 +53,7 @@ describe('Sign Up API Tests', () => {
                 user:
                 {
                     username: "Tinika1",
-                    email:  utility.generateRandomEmail(),
+                    email: utility.generateRandomEmail(),
                     password: "Test@123"
                 }
             }

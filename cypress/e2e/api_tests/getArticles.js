@@ -1,9 +1,11 @@
 describe('Global Feed API Tests', () => {
 
     const apiUrl = 'https://conduit.productionready.io/api';
+    const signInPath = '/users/login'
     const articleFeedPath = '/articles';
     const slug = 'Ill-quantify-the-redundant-TCP-bus-that-should-hard-drive-the-ADP-bandwidth!-553';
-    const username = 'Maksim Esteban'
+    const accessToken = '';
+
 
     it('Get article by slug', () => {
         cy.request('GET', apiUrl + articleFeedPath + '/' + slug, {
