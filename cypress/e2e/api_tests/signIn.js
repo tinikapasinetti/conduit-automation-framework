@@ -31,10 +31,8 @@ describe('Sign In API Tests', () => {
             }
         }).should((response) => {
             expect(response.status).to.eq(403);
-        });
-
-
+            expect(response.body.errors).to.have.property('email or password');
+            expect(response.body.errors["email or password"]).to.contain('is invalid');
+        })
     });
-
-
 })
