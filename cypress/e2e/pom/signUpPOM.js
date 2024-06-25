@@ -11,10 +11,12 @@ export default class signUpPOM {
     }
 
     enterUsername(username){
-        if((username === "random")){
-            username = "u+"+ Date.now();
+        if((username === "blank")){
+            username = ""
+        }else if(username === "random"){
+            username = "user+"+ Date.now()+ "@test.com";
+            this.screenElement.usernameField().type(username);
         }
-        this.screenElement.usernameField().type(username);
     }
 
     enterEmail(email){
@@ -22,8 +24,8 @@ export default class signUpPOM {
             email = ""
         }else if(email === "random"){
             email = "email+"+ Date.now()+ "@test.com";
+            this.screenElement.emailField().type(email);
         }
-        this.screenElement.emailField().type(email);
     }
     enterPassword(password){
         if(!(password === "blank")){

@@ -1,0 +1,252 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Sign Up",
+    "line": 1,
+    "id": "sign-up",
+    "tags": [],
+    "uri": "SignUp.feature",
+    "elements": [
+      {
+        "id": "sign-up;verify-successful-sign-up",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Verify successful sign up",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I open the Conduit web app",
+            "result": {
+              "status": "passed",
+              "duration": 722000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 4,
+            "name": "I click the \"signUp\" button on the \"home\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 86000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter username \"random\" email \"random\" and password \"Test@123\"",
+            "result": {
+              "status": "passed",
+              "duration": 1251000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the 'signIn' button on the \"signIn\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the \"home\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 1077000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sign-up;verify-unsuccessful-sign-up",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Verify unsuccessful sign up",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open the Conduit web app",
+            "result": {
+              "status": "passed",
+              "duration": 429000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the \"signUp\" button on the \"home\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I enter username \"blank\" email \"random\" and password \"Test@123\"",
+            "result": {
+              "status": "passed",
+              "duration": 756000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click the 'signIn' button on the \"signIn\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 86000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the \"username can't be blank\" error message on the sign in screen",
+            "result": {
+              "status": "passed",
+              "duration": 489000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sign-up;verify-unsuccessful-sign-up",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Verify unsuccessful sign up",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open the Conduit web app",
+            "result": {
+              "status": "passed",
+              "duration": 401000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the \"signUp\" button on the \"home\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 85000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I enter username \"random\" email \"blank\" and password \"Test@123\"",
+            "result": {
+              "status": "passed",
+              "duration": 745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click the 'signIn' button on the \"signIn\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the \"email can't be blank\" error message on the sign in screen",
+            "result": {
+              "status": "passed",
+              "duration": 486000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sign-up;verify-unsuccessful-sign-up",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verify unsuccessful sign up",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open the Conduit web app",
+            "result": {
+              "status": "passed",
+              "duration": 400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the \"signUp\" button on the \"home\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I enter username \"random\" email \"random\" and password \"blank\"",
+            "result": {
+              "status": "passed",
+              "duration": 982000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click the 'signIn' button on the \"signIn\" screen",
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the \"pasword can't be blank\" error message on the sign in screen",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

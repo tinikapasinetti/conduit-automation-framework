@@ -9,7 +9,7 @@ And ("I enter username {string} email {string} and password {string}", (username
     signUpScreen.enterPassword(password);
 })
 
-Then ("I should see the {string} error message on the sign in screen", (errorMsg) => {
-    cy.get(signInScreen.screenElement.errorMsg).should('contain.text', errorMsg);
+Then ("I should see the {string} error message on the sign up screen", (errorMsg) => {
+    cy.get(signUpScreen.screenElement.errorMsg).should('contain.text', errorMsg);
 })
 
