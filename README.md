@@ -3,6 +3,8 @@
 This automation suite contains UI and API tests created using Cypress Automation framework with Cucumber BDD Framework for ease of reading UI tests.
 It follows the Page Object Model where each screen has a POM file and a step definition file for its elements and actions.
 
+The Test cases and application suggestions can be found at the following google drive sheet: https://docs.google.com/spreadsheets/d/1EKjRIHT7UPQ57J5NzW4JehwySOh5GtIE/edit?usp=sharing&ouid=114589631533887484887&rtpof=true&sd=true
+
 <h2>To run using terminal</h2>
 <ol>
   <li>Clone the repository</li>
