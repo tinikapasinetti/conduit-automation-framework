@@ -21,7 +21,7 @@ describe('Sign In API Tests', () => {
         });
     });
 
-    it('Unsuccessful Login with invalid credentials', () => {
+    it('Unsuccessful Login with invalid email', () => {
 
         cy.request({
             method: "POST",
@@ -30,6 +30,23 @@ describe('Sign In API Tests', () => {
             body:
             {
                 user: { email: utility.generateRandomEmail(), password: "Test@123" }
+            }
+        }).should((response) => {
+            expect(response.status).to.eq(403);
+            expect(response.body.errors).to.have.property('email or password');
+            expect(response.body.errors["email or password"]).to.contain('is invalid');
+        })
+    });
+
+    it('Unsuccessful Login with invalid password', () => {
+
+        cy.request({
+            method: "POST",
+            url: apiUrl + signInPath,
+            failOnStatusCode: false,
+            body:
+            {
+                user: { email: "tinikapas@gmail.com", password: "Test@124" }
             }
         }).should((response) => {
             expect(response.status).to.eq(403);

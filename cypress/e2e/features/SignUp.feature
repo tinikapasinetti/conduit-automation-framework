@@ -16,8 +16,10 @@ Feature: Sign Up
                 And I click the 'signIn' button on the "signIn" screen
                 Then I should see the "<errorMsg>" error message on the sign in screen
                 Examples:
-                        | username | email  | password | errorMsg                |
-                        | blank    | random | Test@123 | username can't be blank |
-                        | random   | blank  | Test@123 | email can't be blank    |
-                        | random   | random | blank    | pasword can't be blank  |
+                        | username | email               | password | errorMsg                        |
+                        | blank    | random              | Test@123 | username can't be blank         |
+                        | random   | blank               | Test@123 | email can't be blank            |
+                        | random   | random              | blank    | pasword can't be blank          |
+                        | Tinika1  | random              | Test@123 | username has already been taken |
+                        | random   | tinikapas@gmail.com | Test@123 | email has already been taken    |
 

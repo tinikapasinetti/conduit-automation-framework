@@ -16,6 +16,8 @@ export default class signUpPOM {
         } else if (username === "random") {
             username = "user+" + Date.now() + "@test.com";
             this.screenElement.usernameField().type(username);
+        } else {
+            this.screenElement.usernameField().type(username);
         }
     }
 
@@ -24,6 +26,8 @@ export default class signUpPOM {
             email = ""
         } else if (email === "random") {
             email = "email+" + Date.now() + "@test.com";
+            this.screenElement.emailField().type(email);
+        } else {
             this.screenElement.emailField().type(email);
         }
     }
