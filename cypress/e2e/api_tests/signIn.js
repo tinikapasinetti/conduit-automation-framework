@@ -1,10 +1,13 @@
+import Utility from "../utility";
+
 describe('Sign In API Tests', () => {
 
     const apiUrl = 'https://conduit.productionready.io/api';
-    const loginPath = '/users/login'
+    const signInPath = '/users/login'
+    const utility = new Utility();
 
     it('Successful Login', () => {
-        cy.request('POST', apiUrl + loginPath, {
+        cy.request('POST', apiUrl + signInPath, {
             user:
             {
                 email: 'tinikapas@gmail.com',
@@ -23,11 +26,11 @@ describe('Sign In API Tests', () => {
 
         cy.request({
             method: "POST",
-            url: apiUrl + loginPath,
+            url: apiUrl + signInPath,
             failOnStatusCode: false,
             body:
             {
-                user: { email: "tinikapasofuhjkl@gmail.com", password: "Test@123" }
+                user: { email:utility.generateRandomEmail(), password: "Test@123" }
             }
         }).should((response) => {
             expect(response.status).to.eq(403);
