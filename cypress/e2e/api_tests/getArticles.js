@@ -19,7 +19,7 @@ describe('Global Feed API Tests', () => {
     });
 
     it('Get articles by author', () => {
-        cy.request('GET', 'https://conduit.productionready.io/api/articles?author=Maksim+Esteban&limit=5&offset=0', {
+        cy.request('GET', apiUrl + '/articles?author=Maksim+Esteban&limit=5&offset=0', {
         }).should((response) => {
             expect(response.status).to.eq(200);
             expect(response.body.articles).to.not.be.null;
@@ -29,6 +29,15 @@ describe('Global Feed API Tests', () => {
 
     it('Get all articles', () => {
         cy.request('GET', apiUrl + articleFeedPath, {
+        }).should((response) => {
+            expect(response.status).to.eq(200);
+            expect(response.body.articles).to.not.be.null;
+            expect(response.body.articlesCount).to.be.greaterThan(0);
+        });
+    });
+
+    it('Get articles by tag', () => {
+        cy.request('GET', apiUrl + '/articles?tag=eos', {
         }).should((response) => {
             expect(response.status).to.eq(200);
             expect(response.body.articles).to.not.be.null;
