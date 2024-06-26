@@ -10,6 +10,12 @@ The Test cases and application suggestions can be found at the following google 
   <li>Clone the repository</li>
   <li>Open terminal</li>
   <li>Navigate to the project folder</li>
+   <li>Run: 
+    ```
+    npm install
+    ``` 
+    to install dependencies</li>
+  
 </ol>
 <h3>Run all API tests</h3>
 
